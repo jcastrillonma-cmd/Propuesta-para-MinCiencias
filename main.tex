@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{float}
 
 \geometry{margin=2.5cm}
 
@@ -70,13 +71,16 @@
     \vfill
 
     % Pie (esto ya NO se baja)
-    {\large Palmira, Colombia \par}
+    {\large Palmira, Valle del Cauca, Colombia \par}
     {\large 2026 \par}
 
 \end{titlepage}
 
 \newpage
 
+% Tabla de contenido
+\tableofcontents
+\newpage
 % ----------------------
 % SECCIONES
 % ----------------------
@@ -117,5 +121,10 @@
 \newpage
 
 \input{secciones/13_resultados}
+\newpage
+
+% AQUÍ VA LA BIBLIOGRAFÍA
+\bibliographystyle{unsrt}
+\bibliography{referencias/references}
 
 \end{document}
