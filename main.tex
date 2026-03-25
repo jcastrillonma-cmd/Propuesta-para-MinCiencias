@@ -1,14 +1,29 @@
 \documentclass[12pt]{article}
-
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{amsmath}
-
+\usepackage{geometry}
+\usepackage{tikz}
+\usetikzlibrary{
+    shapes.geometric,
+    arrows.meta,
+    positioning,
+    fit,
+    backgrounds,
+    calc}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{lmodern}
 \geometry{margin=2.5cm}
+
+\addto\captionsspanish{
+    \renewcommand{\tablename}{Tabla}
+}
 
 \begin{document}
 
@@ -81,47 +96,43 @@
 
 % Tabla de contenido
 \tableofcontents
+
+\addcontentsline{toc}{section}{Lista de figuras}
+\listoffigures
+
+\addcontentsline{toc}{section}{Lista de tablas}
+\listoftables
+
 \newpage
 % ----------------------
 % SECCIONES
 % ----------------------
 
 \input{secciones/01_resumen}
-\newpage
 
 \input{secciones/02_palabras_clave}
 
 \input{secciones/03_misiones}
-\newpage
 
 \input{secciones/04_actores}
-\newpage
 
 \input{secciones/05_area_ocde}
 
 \input{secciones/06_problema}
-\newpage
 
 \input{secciones/07_antecedentes}
-\newpage
 
 \input{secciones/08_justificacion}
-\newpage
 
 \input{secciones/09_marco_teorico}
-\newpage
 
 \input{secciones/10_objetivos}
-\newpage
 
 \input{secciones/11_alcance}
-\newpage
 
 \input{secciones/12_lugar}
-\newpage
 
 \input{secciones/13_resultados}
-\newpage
 
 % AQUÍ VA LA BIBLIOGRAFÍA
 \bibliographystyle{unsrt}
