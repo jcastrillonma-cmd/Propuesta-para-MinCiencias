@@ -19,21 +19,32 @@
 \usepackage{array}
 \usepackage{caption}
 \usepackage{lmodern}
-\geometry{margin=2.5cm}
+\usepackage{csquotes}  % Requerido por biblatex con babel en español
 
+% ----------------------
+% BIBLIOGRAFÍA APA 7
+% ----------------------
+\usepackage[
+    backend=biber,
+    style=apa,
+    sortcites=true,
+    sorting=nyt,
+    language=spanish
+]{biblatex}
+\addbibresource{referencias/references.bib}
+
+\geometry{margin=2.5cm}
 \addto\captionsspanish{
     \renewcommand{\tablename}{Tabla}
 }
 
 \begin{document}
-
 % ----------------------
 % PORTADA
 % ----------------------
 \begin{titlepage}
     \centering
     \onehalfspacing
-
     % Logos
     \begin{minipage}{0.45\textwidth}
         \raggedright
@@ -43,99 +54,81 @@
         \raggedleft
         \includegraphics[width=3cm]{imagenes/logo_univalle.png}
     \end{minipage}
-
     \vspace{1cm}
-
     % Universidad
     {\large \textbf{UNIVERSIDAD NACIONAL DE COLOMBIA} \par}
     {\large SEDE PALMIRA \par}
     {\large MAESTRÍA EN INGENIERÍA AGROINDUSTRIAL \par}
-
     \vspace{0.3cm}
-
     {\normalsize \textit{Proyecto desarrollado en colaboración con la Universidad del Valle} \par}
-
     \vspace{1.5cm}
-
     % Título
     {\bfseries\large
-    Desarrollo y escalamiento de tecnología de secado de café basada en control de humedad relativa mediante bomba de calor para la industrialización de cafés diferenciados y la evaluación de su impacto socioeconómico en Colombia
+    Escalamiento de la tecnología de secado asistida por bomba de calor basada en control de humedad relativa para la industrialización de cafés diferenciados y evaluación del impacto socioeconómico regional
     \par}
-
     \vspace{1.5cm}
-
     % Autor
     {\large \textbf{Juan David Castrillón Martínez} \par}
-
     \vspace{0.3cm}
-
     {\normalsize
     Propuesta de investigación presentada como requisito para optar al título de Magíster en Ingeniería Agroindustrial
     \par}
-
     \vspace{1.5cm}
-
     % Directores
     {\normalsize \textbf{Director} \par}
     {\large Hugo Alexander Martínez Correa \par}
-
     \vspace{0.3cm}
-
     {\normalsize \textbf{Codirector} \par}
     {\large Juan Carlos Gómez Daza \par}
-
     \vfill
-
-    % Pie (esto ya NO se baja)
     {\large Palmira, Valle del Cauca, Colombia \par}
     {\large 2026 \par}
-
 \end{titlepage}
 
 \newpage
-
 % Tabla de contenido
 \tableofcontents
-
 \addcontentsline{toc}{section}{Lista de figuras}
 \listoffigures
-
 \addcontentsline{toc}{section}{Lista de tablas}
 \listoftables
-
 \newpage
+
 % ----------------------
 % SECCIONES
 % ----------------------
-
 \input{secciones/01_resumen}
-
 \input{secciones/02_palabras_clave}
-
 \input{secciones/03_misiones}
-
 \input{secciones/04_actores}
-
 \input{secciones/05_area_ocde}
-
 \input{secciones/06_problema}
-
 \input{secciones/07_antecedentes}
-
 \input{secciones/08_justificacion}
-
 \input{secciones/09_marco_teorico}
-
 \input{secciones/10_objetivos}
-
 \input{secciones/11_alcance}
-
 \input{secciones/12_lugar}
-
 \input{secciones/13_resultados}
 
-% AQUÍ VA LA BIBLIOGRAFÍA
-\bibliographystyle{unsrt}
-\bibliography{referencias/references}
+\newpage
+% ----------------------
+% BIBLIOGRAFÍA
+% ----------------------
+\printbibliography[title={Referencias}]
 
 \end{document}
+```
+
+Los cambios clave son estos:
+
+**Lo que se eliminó:** `\bibliographystyle{unsrt}` y `\bibliography{...}`, que son los comandos del sistema antiguo `BibTeX`.
+
+**Lo que se agregó:**
+- `\usepackage{csquotes}` — obligatorio para que `biblatex` maneje bien las comillas en español.
+- El bloque `\usepackage[backend=biber, style=apa, ...]{biblatex}` con `\addbibresource{}`.
+- `\printbibliography[title={Referencias}]` al final, que reemplaza los dos comandos anteriores.
+
+**Cómo compilar ahora** (el orden cambia porque usas `biber` en lugar de `bibtex`):
+```
+pdflatex main.tex  →  biber main  →  pdflatex main.tex  →  pdflatex main.tex
