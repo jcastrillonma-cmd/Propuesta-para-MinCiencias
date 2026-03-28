@@ -1,13 +1,144 @@
 \section{Alcance de la propuesta}
 
-El presente proyecto tiene como alcance el diseño, escalamiento y validación de una tecnología de secado de café basada en el control de humedad relativa mediante bomba de calor, orientada a su aplicación en procesos agroindustriales para la estandarización de cafés diferenciados.
+\subsection{Descripción del alcance}
 
-En el marco del programa de Maestría en Ingeniería Agroindustrial de la Universidad Nacional de Colombia, sede Palmira, la propuesta contempla el desarrollo de un sistema de secado a nivel piloto avanzado, con criterios de diseño que permitan su escalabilidad a capacidades industriales comprendidas entre 5 y 20 toneladas por lote. El alcance incluye el modelado del proceso de secado, la optimización de variables operativas, la implementación de estrategias de manejo del producto, así como la evaluación de la calidad del café obtenido bajo diferentes condiciones de operación.
+El presente proyecto tiene como objetivo escalar y validar una tecnología de secado 
+de café basada en el control de humedad relativa mediante bomba de calor, orientada 
+a la estandarización de cafés diferenciados en el sector agroindustrial colombiano. 
+La propuesta se inscribe en la línea temática de desarrollo tecnológico agroindustrial 
+del programa de Maestría en Ingeniería Agroindustrial de la Universidad Nacional de 
+Colombia, sede Palmira, cuyo propósito es formar recurso humano capaz de identificar 
+problemas, formular proyectos y plantear soluciones que incrementen la competitividad 
+del sector agroindustrial nacional.
 
-Asimismo, el proyecto considera la validación experimental de la tecnología en condiciones controladas y su proyección hacia escenarios reales de aplicación, particularmente en plantas de beneficio centralizadas como la propuesta en el municipio de Sevilla, Valle del Cauca. En este contexto, se analizará la viabilidad técnica, económica y social de su implementación, así como su integración con modelos productivos como el esquema de compra de café en cereza (CERPER).
+Los productos esperados comprenden: (1) un modelo CFD validado de la cinética de 
+secado bajo condiciones controladas de humedad relativa; (2) un prototipo piloto 
+funcional del sistema de secado asistido por bomba de calor con estrategias de manejo 
+del producto para cafés diferenciados; (3) un protocolo de operación estandarizado 
+para procesos \textit{honey} y \textit{natural}; (4) un análisis de viabilidad 
+técnica, económica y social para su implementación en plantas de beneficio 
+centralizadas; y (5) artículos científicos que contribuyan al conocimiento en 
+ingeniería agroindustrial y postcosecha del café.
 
-En términos de articulación con la Política de Investigación e Innovación Orientada por Misiones (PIIOM), el alcance del proyecto se alinea con la Misión de Bioeconomía y Territorio, al promover la valorización del café mediante el desarrollo de tecnologías que permiten diversificar la oferta de productos y mejorar su competitividad en mercados internacionales. De igual manera, se vincula con la Misión de Energía Sostenible, al incorporar el uso de tecnologías eficientes como la bomba de calor y la posible integración de fuentes de energía renovable.
+El impacto territorial se focaliza en el Valle del Cauca, departamento que no cuenta 
+actualmente con ninguna planta de beneficio centralizada, carencia que la Federación 
+Nacional de Cafeteros y el Comité Departamental de Cafeteros del Valle del Cauca 
+buscan subsanar como estrategia prioritaria de competitividad regional. El municipio de Sevilla se plantea como escenario de referencia, en articulación con 
+el esquema de compra de café en cereza (CERPER), beneficiando a los caficultores 
+mediante el acceso colectivo a tecnologías avanzadas que les permitan acceder al 
+mercado de cafés de especialidad.
 
-Adicionalmente, el proyecto contribuye a la Misión de Ciencia para la Paz, al proponer soluciones que fortalecen las economías lícitas en territorios rurales, mediante el mejoramiento de la calidad del producto, la reducción de pérdidas en la cadena productiva y la generación de mayores ingresos para los caficultores.
+En cuanto a su articulación con la Política de Investigación e Innovación Orientada 
+por Misiones (PIIOM), el proyecto se alinea con la Misión de Bioeconomía y Territorio, 
+al valorizar el café mediante tecnologías que diversifican la oferta diferenciada y 
+mejoran su competitividad internacional; con la Misión de Energía Sostenible, al 
+incorporar la bomba de calor y proyectar su integración con fuentes renovables; y con 
+la Misión de Ciencia para la Paz, al fortalecer economías lícitas en territorios 
+rurales cafeteros y generar bases científicas para futuras investigaciones de maestría 
+y doctorado. En este sentido, el Valle del Cauca y la región Pacífico —incluyendo 
+Nariño y Cauca, con fuerte vocación cafetera— reconocen la necesidad de fortalecer 
+el capital humano avanzado como condición esencial para consolidar procesos de 
+investigación, desarrollo e innovación alineados con sus vocaciones productivas, 
+ámbito en el que la Maestría en Ingeniería Agroindustrial de la Universidad Nacional 
+de Colombia, sede Palmira, realiza un aporte fundamental.
 
-Es importante señalar que el alcance de la propuesta se limita al desarrollo, validación y evaluación de la tecnología a nivel piloto escalable, así como al análisis de su viabilidad, sin contemplar su implementación a escala industrial completa dentro del tiempo de ejecución de la maestría. No obstante, se espera que los resultados obtenidos sirvan como base para futuros procesos de transferencia tecnológica e implementación a gran escala.
+La divulgación de resultados se realizará mediante talleres de capacitación, cartillas 
+técnicas y contenidos en formatos no académicos —podcasts, videos e infografías— 
+dirigidos a las comunidades cafeteras, con el propósito de fortalecer la apropiación 
+social de la tecnología y visibilizar el potencial de los cafés diferenciados del 
+Valle del Cauca en mercados de especialidad.
+
+Es importante señalar que el alcance de la propuesta se limita al desarrollo, validación y
+evaluación de la tecnología a nivel piloto escalable, así como al análisis de su viabilidad, sin
+contemplar su implementación a escala industrial completa dentro del tiempo de ejecución
+de la maestría. No obstante, se espera que los resultados obtenidos sirvan como base para
+futuros procesos de transferencia tecnológica e implementación a gran escala.
+
+\subsection{Metodología}
+
+La metodología se estructura en cuatro fases articuladas con los objetivos específicos 
+del proyecto, en coherencia con el alcance definido y las exigencias de la PIIOM en 
+sus misiones de Bioeconomía y Territorio, Energía Sostenible y Ciencia para la Paz.
+
+\subsubsection*{Fase I: Modelado del proceso de secado bajo condiciones controladas 
+de humedad relativa}
+
+El modelado del proceso de secado de café (\textit{Coffea arabica}) se abordará 
+principalmente mediante simulación numérica por Dinámica de Fluidos Computacional 
+(\textit{Computational Fluid Dynamics}, CFD), permitiendo representar con alta 
+precisión la distribución espacial del flujo de aire, los gradientes de temperatura 
+y los fenómenos de transferencia de masa y calor al interior del secador. De manera 
+complementaria, se ajustarán modelos empíricos de cinética de secado (Page, Henderson 
+\& Pabis, Fick, entre otros) para validar y contrastar las predicciones del modelo 
+CFD con el comportamiento real del grano.
+
+\textbf{Actividades principales:}
+\begin{itemize}
+    \item Revisión sistemática de literatura sobre modelado CFD aplicado al secado 
+    agroindustrial con tecnologías de bomba de calor.
+    \item Construcción, parametrización y simulación numérica del modelo CFD bajo 
+    diferentes condiciones de humedad relativa, temperatura y velocidad del aire.
+    \item Diseño y montaje del sistema de secado piloto para la obtención de datos 
+    experimentales de validación.
+    \item Ajuste de modelos empíricos de cinética y validación estadística comparativa 
+    frente al modelo CFD mediante RMSE, $R^2$ y MAPE.
+\end{itemize}
+
+\subsubsection*{Fase II: Validación experimental de la tecnología propuesta}
+
+Se validará experimentalmente el sistema de secado, evaluando estrategias de manejo 
+del producto —volteo mecánico y agitación controlada— para garantizar la homogeneidad 
+del secado en cafés diferenciados. La validación se realizará comparando los valores 
+predichos por el modelo CFD con los resultados experimentales del prototipo piloto, 
+en articulación con los criterios técnicos de Cenicafé.
+
+\textbf{Actividades principales:}
+\begin{itemize}
+    \item Evaluación de estrategias de manejo del producto en cafés en diferentes 
+    estados de proceso (cereza, despulpado con mucílago, lavado).
+    \item Ejecución de pruebas experimentales de validación bajo condiciones 
+    controladas de operación.
+    \item Validación estadística y ajuste de parámetros operativos mediante RMSE, 
+    $R^2$ y MAPE, en articulación con Cenicafé.
+\end{itemize}
+
+\subsubsection*{Fase III: Evaluación de la calidad física, química y sensorial 
+del café}
+
+Se evaluará integralmente la calidad del café obtenido bajo las condiciones 
+establecidas en las fases anteriores, con énfasis en procesos \textit{honey} y 
+\textit{natural}. Se aplicarán análisis físicos (rendimiento, humedad, defectos), 
+químicos (actividad de agua, ácidos clorogénicos, compuestos volátiles) y sensoriales 
+bajo el protocolo SCA (\textit{Specialty Coffee Association}).
+
+\textbf{Actividades principales:}
+\begin{itemize}
+    \item Diseño experimental factorial con tipo de proceso, temperatura y humedad 
+    relativa como variables independientes.
+    \item Análisis físico, químico y sensorial de muestras mediante panel de catadores 
+    certificados bajo protocolo SCA.
+    \item Análisis estadístico multivariado para identificar las condiciones óptimas 
+    de operación en función de la calidad del producto.
+\end{itemize}
+
+\subsubsection*{Fase IV: Análisis de viabilidad técnica, económica y social}
+
+Se analizará la viabilidad de implementación de la tecnología en plantas de beneficio 
+centralizadas, tomando como escenario de referencia el municipio de Sevilla, Valle 
+del Cauca, e integrando el modelo CERPER. Se construirán indicadores económicos 
+(TIR, VPN, período de recuperación) y sociales (generación de empleo, mejora del 
+ingreso caficultor), y los resultados serán socializados con el Comité Departamental 
+de Cafeteros del Valle del Cauca como insumo para la toma de decisiones en torno a 
+la planta de beneficio centralizada proyectada en la región.
+
+\textbf{Actividades principales:}
+\begin{itemize}
+    \item Estimación de costos de inversión, operación y mantenimiento para la planta 
+    centralizada propuesta en Sevilla, Valle del Cauca.
+    \item Construcción de indicadores de viabilidad económica y evaluación del impacto 
+    socioeconómico mediante indicadores cuantitativos y entrevistas con actores clave.
+    \item Socialización de resultados con el Comité Departamental mediante mesas de 
+    trabajo y divulgación en formatos accesibles para las comunidades productoras.
+    \item Análisis de integración de fuentes de energía renovable al sistema, en 
+    coherencia con la Misión de Energía Sostenible de la PIIOM.
+\end{itemize}
