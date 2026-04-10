@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}
@@ -14,15 +15,35 @@
     positioning,
     fit,
     backgrounds,
-    calc}
+    calc, shadows.blur}
 \usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{caption}
 \usepackage{lmodern}
 \usepackage{csquotes}
 \usepackage{fancyhdr}
+\usepackage{pifont}  % Para símbolos decorativos
 
+% ========================== PASO 2: COLORES =================================
+% (pegar en el preámbulo, después de los paquetes)
+
+\definecolor{red1}{HTML}{8B0000}
+\definecolor{red2}{HTML}{C62828}
+\definecolor{red3}{HTML}{E57373}
+\definecolor{redTextL}{HTML}{FFCDD2}
+\definecolor{purple1}{HTML}{4A148C}
+\definecolor{purplePale}{HTML}{F3E5F5}
+\definecolor{blue3}{HTML}{5C6BC0}
+\definecolor{blue2}{HTML}{1976D2}
+\definecolor{blue1}{HTML}{0D47A1}
+\definecolor{blueTextL}{HTML}{BBDEFB}
+\definecolor{textDark}{HTML}{1A1A1A}
+\definecolor{textMid}{HTML}{555555}
+\definecolor{grayLine}{HTML}{BDBDBD}
 % ----------------------
 % BIBLIOGRAFÍA APA 7
 % ----------------------
@@ -58,56 +79,78 @@
     \centering
     \onehalfspacing
 
-    \begin{minipage}[c]{0.45\textwidth}
-        \raggedright
-        \includegraphics[width=2.5cm]{imagenes/logo_unal.png}
-    \end{minipage}
-    \begin{minipage}[c]{0.45\textwidth}
-        \raggedleft
-        \includegraphics[width=2.5cm]{imagenes/logo_univalle.png}
-    \end{minipage}
+    % ── Logos ──────────────────────────────────────────────────────────────
+    \vspace*{0.5cm}
+\raisebox{0pt}[0pt][0pt]{%
+    \includegraphics[height=1.6cm]{imagenes/unal_actores.png}}\hspace{1.0cm}
+\raisebox{0pt}[0pt][0pt]{%
+    \includegraphics[height=1.6cm]{imagenes/univalle_actores.png}}\hspace{1.0cm}
+\raisebox{0pt}[0pt][0pt]{%
+    \includegraphics[height=1.0cm]{imagenes/cenicafe_logo.png}}\hspace{0.8cm}
+\raisebox{0pt}[0pt][0pt]{%
+    \includegraphics[height=0.88cm]{imagenes/tecnicafe_actores.png}}
 
-    \vspace{1.2cm}
+    \vspace{1.4cm}
 
+    % ── Institución ────────────────────────────────────────────────────────
     {\large \textbf{UNIVERSIDAD NACIONAL DE COLOMBIA} \par}
+    \vspace{0.15cm}
+    {\normalsize SEDE PALMIRA \par}
+    \vspace{0.05cm}
+    {\normalsize MAESTRÍA EN INGENIERÍA AGROINDUSTRIAL \par}
     \vspace{0.2cm}
-    {\large SEDE PALMIRA \par}
-    {\large MAESTRÍA EN INGENIERÍA AGROINDUSTRIAL \par}
-    \vspace{0.3cm}
-    {\normalsize \textit{Proyecto desarrollado en colaboración con la Universidad del Valle} \par}
+    {\small \textit{Proyecto desarrollado en colaboración con la Universidad del Valle} \par}
 
-    \vspace{1.2cm}
+    \vspace{1.3cm}
 
-    {\bfseries\large
-    Escalamiento de la tecnología de secado asistida por bomba de calor basada en 
-    control de humedad relativa para la industrialización de cafés diferenciados y 
-    evaluación del impacto socioeconómico regional
-    \par}
+    % ── Título ─────────────────────────────────────────────────────────────
+    \begin{minipage}{0.82\textwidth}
+        \centering
+        {\bfseries\large
+        Escalamiento de la tecnología de secado asistida por bomba de calor
+        basada en control de humedad relativa para la industrialización de
+        cafés diferenciados y evaluación del impacto socioeconómico regional
+        \par}
+    \end{minipage}
 
-    \vspace{1.2cm}
+    \vspace{1.3cm}
 
+    % ── Autor ──────────────────────────────────────────────────────────────
     {\large \textbf{Juan David Castrillón Martínez} \par}
-    \vspace{0.3cm}
-    {\normalsize
-    Propuesta de investigación presentada como requisito para optar al título de 
+    \vspace{0.4cm}
+    {\small
+    Propuesta de investigación presentada como requisito para optar al título de\\
     Magíster en Ingeniería Agroindustrial
     \par}
 
     \vfill
 
-    {\normalsize \textbf{Director} \par}
+    % ── Director y Codirector ──────────────────────────────────────────────
+    \begin{minipage}[t]{0.42\textwidth}
+        \centering
+        {\small \textbf{Director} \par}
+        \vspace{0.15cm}
+        {\small Hugo Alexander Martínez Correa \par}
+        {\footnotesize Profesor asociado \par}
+        {\footnotesize Universidad Nacional de Colombia\\Sede Palmira \par}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.42\textwidth}
+        \centering
+        {\small \textbf{Codirector} \par}
+        \vspace{0.15cm}
+        {\small Juan Carlos Gómez Daza \par}
+        {\footnotesize Profesor asociado \par}
+        {\footnotesize Universidad del Valle\\Sede Meléndez \par}
+    \end{minipage}
+
+    \vspace{1.2cm}
+
+    % ── Lugar y año ────────────────────────────────────────────────────────
+    {\small Palmira, Valle del Cauca, Colombia \par}
     \vspace{0.1cm}
-    {\normalsize Hugo Alexander Martínez Correa \par}
+    {\small 2026 \par}
     \vspace{0.4cm}
-    {\normalsize \textbf{Codirector} \par}
-    \vspace{0.1cm}
-    {\normalsize Juan Carlos Gómez Daza \par}
-
-    \vspace{1.0cm}
-
-    {\normalsize Palmira, Valle del Cauca, Colombia \par}
-    \vspace{0.1cm}
-    {\normalsize 2026 \par}
 
 \end{titlepage}
 % ----------------------

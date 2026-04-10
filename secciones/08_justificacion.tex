@@ -11,25 +11,21 @@ al 2\% del café tipo \textit{commodity}, posicionando al secado como una operac
 estratégica para la preservación del valor agregado \parencite{barbosa_sensory_2019}.
 
 Desde una perspectiva social, la caficultura colombiana involucra aproximadamente 
-542000 familias productoras, de las cuales la gran mayoría son pequeños caficultores 
+540000 familias productoras, de las cuales la gran mayoría son pequeños caficultores 
 con un promedio de dos hectáreas sembradas por finca, generando cerca de 2.5 millones 
 de empleos directos e indirectos en el país \parencite{betancourt_agricultural_2024, tabarquino_munoz_cadena_2025}. La mayor 
 concentración de productores se ubica en la región Andina, donde departamentos como 
 Antioquia (16.6\%), Cauca (11.4\%), Huila (13.7\%), Tolima (10.7\%) y Nariño representan 
 conjuntamente el 54.8\% del área cultivada nacional \parencite{betancourt_agricultural_2024, tabarquino_munoz_cadena_2025, navarro_munoz_sector_2024}, 
 siendo el departamento del Valle del Cauca un escenario estratégico para la 
-validación y escalamiento de tecnologías de beneficio centralizado. No obstante, el 
-54\% de los productores cafeteros vive en condiciones de pobreza o vulnerabilidad 
-\parencite{navarro_munoz_sector_2024}, y su dependencia del secado solar tradicional los 
-expone a pérdidas de hasta el 50\% de la producción por condiciones climáticas adversas 
-\parencite{guevara-sanchez_effect_2019}, mayor carga laboral y dificultad para acceder 
-a mercados de alto valor \parencite{dias_alixandre_physical_2023, 
-parra-coronado_preliminary_2020}. Estudios previos evidencian una correlación directa 
+validación y escalamiento de tecnologías de beneficio centralizado. Estudios previos evidencian una correlación directa 
 entre mayores rendimientos productivos y menores índices de pobreza multidimensional 
 en zonas rurales cafeteras \parencite{betancourt_agricultural_2024}, lo que sugiere que la 
 tecnificación del secado no solo impacta la calidad del producto, sino también la 
 estabilidad del ingreso familiar y las condiciones de vida de las comunidades 
-productoras. En materia de equidad de género, las mujeres representan el 26\% de los 
+productoras.
+
+En materia de equidad de género, las mujeres representan el 26\% de los 
 caficultores \parencite{navarro_munoz_sector_2024}, y la reducción de la carga física 
 asociada al secado solar mediante sistemas mecanizados contribuye a su inclusión 
 efectiva en la cadena productiva \parencite{tabarquino_munoz_cadena_2025, betancourt_agricultural_2024}.
@@ -48,7 +44,9 @@ pueden superar hasta diez veces el valor del café convencional
 ampliar el valor exportado. Sin embargo, procesos de secado deficientes pueden devaluar 
 el precio del grano entre un 10\% y un 20\% \parencite{ferreira_bernardes_pereira_influence_2020}, 
 mientras que el uso de aire deshumidificado controlado puede incrementar su valor 
-comercial en más del 12\% \parencite{konopatzki_price_2019}. A esto se suma que el 
+comercial en más del 12\% \parencite{konopatzki_price_2019}.
+
+A esto se suma que el 
 secado representa más del 60\% del consumo energético total del procesamiento 
 \parencite{coradi_development_2021, cruz-ospina_improving_2026}, y que las cosechas 
 colombianas coinciden con épocas de alta pluviosidad y humedad relativa superior al 
@@ -100,3 +98,162 @@ relativa, eficiencia energética y escalabilidad \parencite{khathir_drying_2024,
 konopatzki_coffee_2022, malik_microstructure_2020}, justificando el escalado de una 
 tecnología de secado asistido por bomba de calor para estandarizar procesos de cafés 
 diferenciados y mejorar la competitividad del sector cafetero colombiano.
+
+% (pegar en el cuerpo del documento, donde quieras que aparezca)
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    font=\sffamily,
+    every node/.style={align=center, text=textDark},
+]
+
+% --- Título ---
+\node[font=\bfseries\LARGE, text=red1] at (0, 2.0)
+    {Diagrama de Reloj de Arena};
+\node[font=\large\bfseries, text=purple1] at (0, 1.0)
+    {Justificación de la Investigación};
+
+% ==================================================================
+%  PARTE SUPERIOR — PROBLEMA (Rojos: oscuro → medio → claro)
+% ==================================================================
+
+% Nivel 1: Contexto Nacional (más ancho, rojo oscuro)
+\fill[red1, rounded corners=4pt,
+      blur shadow={shadow blur steps=5, shadow xshift=0.8pt, shadow yshift=-0.8pt}]
+    (-9.0, -0.7) rectangle (9.0, -2.5);
+\node[text=white, font=\bfseries\large] at (0, -1.1)
+    {Contexto Nacional};
+\node[text=redTextL, font=\normalsize, text width=16cm] at (0, -1.9)
+    {El café aporta el 25,8\% del valor agregado agrícola
+     de Colombia \ \ $\bullet$ \ \ 553 M USD en exportaciones
+     \ \ $\bullet$ \ \ 540000+ familias cafeteras};
+
+% Nivel 2: El Problema (medio, rojo medio)
+\fill[red2, rounded corners=4pt,
+      blur shadow={shadow blur steps=5, shadow xshift=0.8pt, shadow yshift=-0.8pt}]
+    (-7.3, -3.1) rectangle (7.3, -5.9);
+\node[text=white, font=\bfseries\large] at (0, -3.5)
+    {El Problema};
+\node[text=white, font=\normalsize, text width=12.5cm] at (0, -4.8)
+    {El secado solar tradicional ($>$10 días) depende del clima,
+     no controla temperatura ni humedad, y genera reacciones
+     degenerativas que afectan valor nutricional, textura, color,
+     aroma y sabor. Secadores mecánicos convencionales:
+     eficiencia $\leq$ 35\%.};
+
+% Nivel 3: Brecha Identificada (más estrecho, rojo claro)
+\fill[red3, rounded corners=4pt,
+      blur shadow={shadow blur steps=5, shadow xshift=0.8pt, shadow yshift=-0.8pt}]
+    (-5.8, -6.5) rectangle (5.8, -8.7);
+\node[text=white, font=\bfseries\large] at (0, -6.9)
+    {Brecha Identificada};
+\node[text=white, font=\normalsize, text width=9.8cm] at (0, -8.0)
+    {No existen estudios que evalúen el control
+     independiente de la humedad relativa (HR)
+     en el secado de café de especialidad
+     con bomba de calor modificada.};
+
+% ==================================================================
+%  CENTRO — PREGUNTA DE INVESTIGACIÓN (Morado)
+% ==================================================================
+
+% Recuadro central morado
+\node[
+    draw=purple1, line width=2.5pt,
+    fill=purplePale,
+    rounded corners=8pt,
+    inner sep=12pt,
+    blur shadow={shadow blur steps=8, shadow xshift=1pt, shadow yshift=-1pt},
+    font=\bfseries\large,
+    text width=12cm
+] (centro) at (0, -10.9) {
+    \centering
+    \textcolor{purple1}{Pregunta de Investigación}\\[6pt]
+    \textcolor{textDark}{\normalfont\normalsize
+    ¿Cómo escalar una tecnología de secado de café basada en el control de la humedad relativa mediante bomba de calor para mejorar la calidad y eficiencia del proceso en cafés diferenciados?}
+};
+
+% ==================================================================
+%  PARTE INFERIOR — IMPACTO (Azules: claro → medio → oscuro)
+% ==================================================================
+
+% Nivel 3': Justificación Tecnológica (estrecho, azul claro)
+\fill[blue3, rounded corners=4pt,
+      blur shadow={shadow blur steps=5, shadow xshift=0.8pt, shadow yshift=-0.8pt}]
+    (-5.8, -13.1) rectangle (5.8, -15.3);
+\node[text=white, font=\bfseries\large] at (0, -13.5)
+    {Justificación Tecnológica};
+\node[text=white, font=\normalsize, text width=9.8cm] at (0, -14.5)
+    {El SBC modificado consume 60--80\% menos
+     energía, permite control preciso de HR, opera independientemente
+     del clima y no emite contaminantes.};
+
+% Nivel 2': Justificación Sostenible y Normativa (medio, azul medio)
+\fill[blue2, rounded corners=4pt,
+      blur shadow={shadow blur steps=5, shadow xshift=0.8pt, shadow yshift=-0.8pt}]
+    (-7.3, -15.9) rectangle (7.3, -18.3);
+
+\node[text=white, font=\bfseries\large] at (0, -16.35)
+    {Justificación Sostenible y Normativa};
+
+\node[text=blueTextL, font=\normalsize, text width=13.8cm, align=center] at (0, -17.4)
+{
+Alineación con el Pacto Verde Europeo (2024):
+trazabilidad, libre de deforestación y producción sostenible.
+Ventaja competitiva para café orgánico colombiano en mercados premium.
+Alineación con PIIOM de Minciencias.
+};
+
+% Nivel 1': Impacto Esperado (más ancho, azul oscuro)
+\fill[blue1, rounded corners=4pt,
+      blur shadow={shadow blur steps=5, shadow xshift=0.8pt, shadow yshift=-0.8pt}]
+    (-9.0, -18.9) rectangle (9.0, -21.0);
+\node[text=white, font=\bfseries\large] at (0, -19.3)
+    {Impacto Esperado};
+\node[text=blueTextL, font=\normalsize, text width=16cm] at (0, -20.3)
+    {Estandarización del secado para café de especialidad
+     \ \ $\bullet$ \ \ Mayor competitividad de 22.792+ caficultores del Valle del Cauca
+     \ \ $\bullet$ \ \ Posicionar a Colombia como líder en innovación poscosecha sostenible
+     \ \ $\bullet$ \ \ Fortalecimiento del capital humano en I+D+i};
+
+% ==================================================================
+%  ANOTACIONES LATERALES
+% ==================================================================
+
+% Izquierda arriba: PROBLEMA (con fondo blanco para evitar tachado)
+\draw[red1, line width=2pt, -{Stealth[length=5pt]}]
+    (-9.8, -0.7) -- (-9.8, -8.0);
+\node[rotate=90, font=\bfseries\normalsize, text=red1,
+      fill=white, inner sep=4pt, rounded corners=2pt] at (-9.8, -4.3)
+    {PROBLEMA};
+
+% Izquierda abajo: IMPACTO
+\draw[blue1, line width=2pt, {Stealth[length=5pt]}-]
+    (-9.8, -13.8) -- (-9.8, -21.0);
+\node[rotate=90, font=\bfseries\normalsize, text=blue1,
+      fill=white, inner sep=4pt, rounded corners=2pt] at (-9.8, -17.4)
+    {IMPACTO};
+
+% Derecha: FOCO
+\draw[purple1, line width=1.5pt, dashed]
+    (9.8, -9.3) -- (9.8, -12.3);
+\node[rotate=-90, font=\bfseries\normalsize, text=purple1,
+      fill=white, inner sep=4pt, rounded corners=2pt] at (9.8, -10.8)
+    {FOCO};
+
+% ==================================================================
+%  SILUETA DECORATIVA DEL RELOJ DE ARENA
+% ==================================================================
+\draw[grayLine, line width=1.5pt, dashed, opacity=0.45]
+    (-9.2, -0.5) -- (-4.8, -10.0) -- (-9.2, -19.2);
+\draw[grayLine, line width=1.5pt, dashed, opacity=0.45]
+    ( 9.2, -0.5) -- ( 4.8, -10.0) -- ( 9.2, -19.2);
+
+\end{tikzpicture}%
+}% fin de \resizebox
+\caption{Diagrama de reloj de arena: justificación de la investigación sobre
+         secado asistido por bomba de calor para café de especialidad.}
+\label{fig:hourglass-justificacion}
+\end{figure}
